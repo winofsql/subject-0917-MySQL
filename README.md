@@ -1,4 +1,4 @@
-# subject-0917-MySQL
+# subject-0917-mysql
 
 ##my.ini
 ```
