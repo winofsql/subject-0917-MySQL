@@ -15,3 +15,11 @@ SELECT * FROM
  )
  AS 得意先データ
 ```
+
+## データ収集( サブクエリリスト )
+```sql
+SELECT
+    ( SELECT MAX(給与) FROM 社員マスタ ) AS 最高給与,
+    ( SELECT MIN(給与) FROM 社員マスタ ) AS 最低給与,
+    ROUND(( SELECT AVG(給与) FROM 社員マスタ )) AS 平均給与
+```
