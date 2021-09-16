@@ -29,3 +29,20 @@ SELECT
 SELECT * FROM 社員マスタ
     WHERE 給与 >= ( SELECT AVG(給与) FROM 社員マスタ )
 ```
+
+## ストアドファンクション
+```sql
+CREATE OR REPLACE FUNCTION SB( PARAM_NUM int ) RETURNS VARCHAR(2)
+BEGIN
+
+    DECLARE WK_NAME VARCHAR(2);
+    IF PARAM_NUM = 0 THEN
+        SET WK_NAME = '男性';
+    ELSE
+        SET WK_NAME = '女性';
+    END IF;
+
+    RETURN WK_NAME;
+
+END;
+```
