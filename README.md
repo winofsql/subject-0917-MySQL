@@ -23,3 +23,9 @@ SELECT
     ( SELECT MIN(給与) FROM 社員マスタ ) AS 最低給与,
     ROUND(( SELECT AVG(給与) FROM 社員マスタ )) AS 平均給与
 ```
+
+## 条件内サブクエリ
+```sql
+SELECT * FROM 社員マスタ
+    WHERE 給与 >= ( SELECT AVG(給与) FROM 社員マスタ )
+```
