@@ -1,5 +1,6 @@
 # subject-0917-MySQL
-**my.ini**\
+
+##my.ini
 ```
 sql_mode=NO_ZERO_IN_DATE,NO_ZERO_DATE,NO_ENGINE_SUBSTITUTION,PIPES_AS_CONCAT
 ```
