@@ -28,7 +28,7 @@ SELECT
     ( SELECT COUNT(*) FROM 商品マスタ ) AS 商品数,
     CURDATE() AS 当日日付
 ```
-**※ ROUND 関数、CURDATE 関数**
+**※ [ROUND 関数](https://dev.mysql.com/doc/refman/5.6/ja/mathematical-functions.html#function_round)、CURDATE 関数**
 
 ## 条件内サブクエリ
 ```sql
