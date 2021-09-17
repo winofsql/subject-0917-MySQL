@@ -9,12 +9,22 @@ sql_mode=NO_ZERO_IN_DATE,NO_ZERO_DATE,NO_ENGINE_SUBSTITUTION,PIPES_AS_CONCAT
 ```sql
 SELECT * FROM
  ( 
-    SELECT 得意先コード,得意先名,担当者,氏名,住所１,住所２,締日,締日区分,支払日 FROM 得意先マスタ 
+    SELECT
+        得意先コード,
+        得意先名,
+        担当者,
+        氏名,
+        REPLACE(住所１,'－','')||REPLACE(住所２,'－','') AS 住所,
+        締日,
+        締日区分,
+        支払日
+    FROM 得意先マスタ 
     LEFT OUTER JOIN 社員マスタ
     ON 得意先マスタ.担当者 = 社員マスタ.社員コード
  )
  AS 得意先データ
-```
+ ```
+ **※ [REPLACE 関数](https://dev.mysql.com/doc/refman/5.6/ja/string-functions.html#function_replace)**
 
 ## データ収集( サブクエリリスト )
 ```sql
