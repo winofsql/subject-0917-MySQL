@@ -24,7 +24,7 @@ SELECT * FROM
  )
  AS 得意先データ
  ```
- **※ [REPLACE 関数](https://dev.mysql.com/doc/refman/5.6/ja/string-functions.html#function_replace)**
+ **※ [REPLACE 関数](https://dev.mysql.com/doc/refman/5.6/ja/string-functions.html#function_replace)**\
  **※ PIPES_AS_CONCAT によって 列データの結合を || で利用可能 ( Oracle と同じ )**
 
 ## データ収集( サブクエリリスト )
