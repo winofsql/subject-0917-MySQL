@@ -36,7 +36,7 @@ SELECT * FROM 社員マスタ
     WHERE 給与 >= ( SELECT AVG(給与) FROM 社員マスタ )
 ```
 
-## NULL が含まれる演算( IFNULL 関数 )
+## NULL が含まれる演算( [IFNULL 関数](https://dev.mysql.com/doc/refman/5.6/ja/control-flow-functions.html#function_ifnull) )
 ```sql
 SELECT 給与 + IFNULL(手当,0) AS 支給額 FROM 社員マスタ
 ```
