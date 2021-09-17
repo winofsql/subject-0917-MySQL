@@ -30,6 +30,11 @@ SELECT * FROM 社員マスタ
     WHERE 給与 >= ( SELECT AVG(給与) FROM 社員マスタ )
 ```
 
+## NULL が含まれる演算( IFNULL 関数 )
+```
+SELECT 給与 + IFNULL(手当,0) AS 支給額 FROM 社員マスタ
+```
+
 ## ストアドファンクション
 ```sql
 CREATE OR REPLACE FUNCTION SB( PARAM_NUM int ) RETURNS VARCHAR(2)
