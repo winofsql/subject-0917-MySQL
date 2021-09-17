@@ -52,6 +52,13 @@ SELECT * FROM 社員マスタ
 SELECT 給与 + IFNULL(手当,0) AS 支給額 FROM 社員マスタ
 ```
 
+## CREATE OR REPLACE で VIEW 作成(更新)
+```sql
+CREATE OR REPLACE VIEW v_社員マスタ
+AS
+SELECT 社員マスタ.*,給与 + IFNULL(手当,0) AS 支給額 FROM 社員マスタ
+```
+
 ## ストアドファンクション
 ```sql
 CREATE OR REPLACE FUNCTION SB( PARAM_NUM int ) RETURNS VARCHAR(2)
